@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+*{
+  font-family: 'Bungee';
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,8 +31,36 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+
+.login-box{
+
+  transition: .5s;
+  transform: scale(.9);
+  border-radius: 100px;
+}
+
+.login-box:hover::before{
+  transform: scale(1.2);
+  box-shadow: 0 0 50px rgb(160, 211, 130);
+}
+
+.login-box:hover{
+  color: rgb(0, 131, 255);
+  box-shadow: 0 0 20px rgb(160, 211, 130);
+}
+
+.fly-up-animation {
+  animation: flyUp 0.5s ease-in-out;
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
+
