@@ -8,7 +8,6 @@ const handler = async (req, res) => {
     }
 
     const { address } = req.body;
-    console.log(address)
     try {
         // Kiểm tra xem địa chỉ đã được đăng ký trước đó hay chưa
         const existingUser = await User.findOne({ address });

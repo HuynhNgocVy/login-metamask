@@ -3,6 +3,7 @@ import { ethers } from "ethers";
 
 function Home() {
     const [ result, setResult ] = useState()
+    
     const handleRegister = async () => {
         try {
             if(!window.ethereum) return "Install MetaMask"
